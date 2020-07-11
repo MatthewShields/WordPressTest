@@ -157,7 +157,6 @@ gulp.task('js', () => {
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(dist_assets_folder + 'js'))
-    .pipe(browserSync.stream())
 })
 
 gulp.task('modern-js', () => {
@@ -237,7 +236,6 @@ gulp.task(
     'postcss',
     'purgecss-rejected',
     'js',
-    'modern-js',
     'images'
   )
 )
@@ -267,5 +265,3 @@ gulp.task('watch', () => {
 })
 
 gulp.task('default', gulp.series('dev', gulp.parallel('watch')));
-
-gulp.task('build', gulp.series('dev'));
