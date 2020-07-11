@@ -1,0 +1,19 @@
+.sidebar {
+    @include font-size(14);
+}
+
+.sidebar__inner {
+    >*:first-child {
+        margin-top: 0;
+    }
+}
+
+.sidebar-wgt {
+    margin: $sp-unit*2 0 0;
+}
+
+.widget-title {
+    margin: 0;
+    @include font-size(20);
+    margin: 0 0 0.5em;
+}

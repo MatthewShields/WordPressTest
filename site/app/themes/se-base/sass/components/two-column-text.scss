@@ -1,0 +1,33 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.two-column-block {
+    position: relative;
+    &__background {
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        margin: 0 0 0 -50vw;
+        top: 0;
+    }
+    &__inner {}
+    &__content {
+        padding: 0 30px;
+    }
+    &__title {}
+    &--border {
+        width: calc(100% + 60px);
+        position: relative;
+        left: -30px;
+        @media(min-width: $breakpoint-md) {
+            width: 100%;
+            left: 0;
+        }
+    }
+    &--border &__content {
+        padding: 30px;
+        background: white;
+        @extend %border-style;
+    }
+}

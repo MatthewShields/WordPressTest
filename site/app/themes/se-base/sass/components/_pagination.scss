@@ -1,0 +1,70 @@
+.loop-pagination {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--numbers {
+        display: none;
+        @media(min-width: $breakpoint-md) {
+            display: block;
+            padding: 0 20px;
+            width: 50%;
+            text-align: center;
+        }
+
+        a, span {
+            padding: 10px;
+            display: inline-block;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+
+    &--arrows {
+        float: right;
+        margin: 0;
+    }
+
+    &--button {
+        width: 47.5%;
+        text-align: center;
+        @media(min-width: $breakpoint-md) {
+            width: 25%;
+        }
+    }
+
+    &--arrow {
+        display: inline-block;
+
+        &-left,
+        &-right {
+            width: 22px;
+            height: 30px;
+            background: no-repeat center center;
+            background-size: contain;
+            overflow: hidden;
+            text-indent: -9999px;
+            display: inline-block;
+        }
+
+        &-left {
+            background-image: url('../../../images/left-arrow--blue.svg');
+        }
+
+        &-right {
+            margin: 0 0 0 10px;
+            background-image: url('../../../images/right-arrow--blue.svg');
+        }
+    }
+
+    .btn {
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+        text-transform: uppercase;
+        &:after {
+            display: none;
+        }
+    }
+}

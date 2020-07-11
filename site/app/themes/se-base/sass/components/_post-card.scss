@@ -1,0 +1,116 @@
+.post-card {
+    @extend %border-style;
+    background: #fff;
+    position: relative;
+    &__header {
+        position: relative;
+        padding-top: 60%;
+        overflow: hidden;
+        background: #ccc;
+    }
+    &__image {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(1);
+        transition: transform 1.5s ease-in-out;
+    }
+    &:hover &__image {
+        transform: scale(1.1);
+    }
+    &__icon-wrapper {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    &__icon {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        background: no-repeat center center;
+        background-size: contain;
+    }
+    &__inner {
+        padding: $sp-unit $sp-unit*1.25;
+        text-align: center;
+    }
+    &__category {
+        margin: 0 0 0.5em;
+        font-weight: 700;
+    }
+    &__meta {
+        @include font-size(15);
+        margin: $sp-unit 0 0;
+        text-align: right;
+    }
+    &__link {
+        text-decoration: none;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &__title {
+        @include font-size(24);
+        margin: 0;
+        text-decoration: none;
+    }
+    &__socials {
+        list-style: none;
+        margin: 0;
+        padding: 0 0 5px;
+        position: absolute;
+        bottom: 100%;
+        left: -5px;
+        white-space: nowrap;
+        @include font-size(10);
+        visibility: hidden;
+        transition: visibility 0s linear 0.25s;
+        li {
+            padding: 5px 5px 0;
+            background: white;
+            transform: translateY($sp-unit);
+            opacity: 0;
+            transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out 0.25s;
+        }
+    }
+    &__sharing {
+        width: $sp-unit;
+        height: $sp-unit;
+        background: url('../../images/social--share.svg') no-repeat center center;
+        background-size: $sp-unit $sp-unit;
+        position: absolute;
+        bottom: $sp-unit;
+        left: $sp-unit;
+        margin: 0;
+        &:hover {
+            ul {
+                visibility: visible;
+                transition: visibility 0s linear;
+            }
+            li {
+                transform: translateY(0);
+                opacity: 1;
+                transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: (0.05 * $i) + 0.1s;
+                    }
+                }
+            }
+        }
+    }
+    p {
+        margin: 0.5em 0 0;
+    }
+}

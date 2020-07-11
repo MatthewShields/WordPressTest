@@ -1,0 +1,39 @@
+ul, 
+ol {
+    margin-left: $sp-unit*1.5;
+}
+
+li {
+    > ul, 
+    > ol {
+        margin-bottom: 0;
+    }
+}
+
+.list--unstyled {
+    list-style: none;
+    margin-left: 0;
+}
+
+dt {
+    font-weight: 700;
+    margin: $sp-unit 0 0;
+    &:first-child {
+        margin: 0;
+    }
+}
+
+dd {
+    padding: 0 0 0 $sp-unit;
+    position: relative;
+    font-style: italic;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0.75em;
+        width: $sp-unit/2;
+        height: 2px;
+        background: $border-color;
+        left: 0;
+    }
+}

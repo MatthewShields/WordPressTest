@@ -1,0 +1,37 @@
+.text-blocks {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .text-block,
+    .cta-block {
+        margin: 0 0 40px;
+        @media(min-width: $breakpoint-md) {
+            width: 47.5%;
+            margin: 0 0 40px 5%;
+            &:nth-child(2n+1) {
+                margin: 0 0 40px;
+            }
+        }
+    }
+}
+
+.text-block {
+    @extend %border-style;
+    padding: 20px;
+    background: white;
+    &__title {
+        color: $brand-color;
+        @include font-size(22);
+        margin: 0;
+    }
+    &__inner {
+        margin: 0.35em 0 0;
+    }
+    p {
+        margin: 1em 0 0;
+        &:first-child {
+            margin: 0;
+        }
+    }
+}

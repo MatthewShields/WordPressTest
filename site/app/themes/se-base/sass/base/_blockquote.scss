@@ -1,0 +1,27 @@
+blockquote {
+    text-align: center;
+    font-style: italic;
+    @media screen and (min-width: $sm) {
+        @include font-size(20);
+    }
+    @media screen and (min-width: $md) {
+        @include font-size(25);
+    }
+    &:before {
+        content: '';
+        display: block;
+        margin: $sp-unit auto $sp-unit/1.5;
+        background: url('../../images/icon--quote-mark.svg') no-repeat center center;
+        background-size: contain;
+        width: 60px;
+        height: 56px;
+        @media screen and (min-width: $md) {
+            width: 80px;
+            height: 75px;
+        }
+    }
+}
+
+.main-content blockquote {
+    margin: $sp-unit*2 0;
+}

@@ -1,0 +1,30 @@
+.share-icon {
+    width: $sp-unit;
+    height: $sp-unit;
+    overflow: hidden;
+    background: no-repeat center center;
+    background-size: $sp-unit $sp-unit;
+    text-indent: -9999px;
+    display: block;
+    &--facebook {
+        background-image: url('../../images/social--facebook.svg');
+    }
+    &--google-plus {
+        background-image: url('../../images/social--google-plus.svg');
+    }
+    &--linkedin {
+        background-image: url('../../images/social--linkedin.svg');
+    }
+    &--pinterest {
+        background-image: url('../../images/social--pinterest.svg');
+    }
+    &--twitter {
+        background-image: url('../../images/social--twitter.svg');
+    }
+    &--whatsapp {
+        background-image: url('../../images/social--whatsapp.svg');
+    }
+    &--mail {
+        background-image: url('../../images/social--mail.svg');
+    }
+}

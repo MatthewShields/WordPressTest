@@ -1,0 +1,65 @@
+.post-list {
+    transition: opacity 0.25s ease-in-out;
+    @media screen and (min-width: $breakpoint-md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__section {
+        &.in-ajax .post-list {
+            opacity: 0.5;
+        }
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        align-items: flex-start;
+        margin: 0 0 $sp-unit;
+    }
+    &__title {
+        margin: 0;
+    }
+    &__footer {
+        text-align: center;
+    }
+}
+
+.filter-list {
+    margin: 0 0 0 $sp-unit*2;
+    position: relative;
+    &__list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        border: 1px $border-color solid;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #fff;
+        opacity: 0;
+        transform: translateX(100vw);
+        transition: transform 0s ease-in-out 0.25s, opacity 0.25s ease-in-out, visibility 0s ease-in-out 0.25s;
+        visibility: hidden;
+        a {
+            padding: 5px 10px;
+            display: block;
+        }
+    }
+    &:hover &__list,
+    &__selected:focus+&__list,
+    &__list:focus-within {
+        right: 0;
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.25s ease-in-out, transform 0s ease-in-out, visibility 0s ease-in-out;
+        visibility: visible;
+    }
+    li {
+        border-top: 1px $border-color solid;
+        &:first-child {
+            border-top: 0;
+        }
+    }
+    &__selected {}
+}

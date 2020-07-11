@@ -1,0 +1,2 @@
+.two-column-block--border .two-column-block__content{border:1px #444 solid}.two-column-block{position:relative}.two-column-block__background{width:100vw;height:100%;position:absolute;left:50%;margin:0 0 0 -50vw;top:0}.two-column-block__content{padding:0 30px}.two-column-block--border{width:calc(100% + 60px);position:relative;left:-30px}@media (min-width:768px){.two-column-block--border{width:100%;left:0}}.two-column-block--border .two-column-block__content{padding:30px;background:#fff}
+/*# sourceMappingURL=two-column-text.css.map */

@@ -1,0 +1,6 @@
+#mobile-test {
+    display: block;
+    @media screen and (min-width: $breakpoint-md) {
+        display: none;
+    }
+}

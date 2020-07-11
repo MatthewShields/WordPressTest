@@ -1,0 +1,33 @@
+.widget_calendar {
+    @include font-size(14);
+    table {
+
+        caption {
+            @include font-size(16);
+            font-weight: 700;
+        }
+
+        th,td {
+            padding: 0;
+            text-align: center;
+            height: 36px;
+            vertical-align: middle;
+        }
+
+        td {
+            font-style: italic;
+        }
+
+        a {
+            display: block;
+            height: 36px;
+            line-height: 36px;
+            font-style: normal;
+        }
+
+        #today {
+            font-style: normal;
+            text-decoration: underline;
+        }
+    }
+}

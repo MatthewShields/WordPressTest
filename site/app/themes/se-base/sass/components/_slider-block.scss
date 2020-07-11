@@ -1,0 +1,142 @@
+.slider-block {
+    padding: 0;
+    width: calc(100% + 60px);
+    position: relative;
+    left: -30px;
+    @media(min-width: $breakpoint-md) {}
+    &__columns {
+        display: flex;
+        flex-direction: column;
+        @media(min-width: $breakpoint-md) {
+            flex-direction: row;
+        }
+    }
+    &__content {
+        position: relative;
+    }
+    &__single {
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        width: 100%;
+        text-align: center;
+        @media(min-width: $breakpoint-md) {
+            text-align: left;
+        }
+        &--active {
+            position: static;
+            display: block;
+        }
+        &--animate {}
+    }
+    &__title {
+        font-size: 180%;
+        line-height: 1.1;
+        @media(min-width: $breakpoint-md) {
+            font-size: 245%;
+        }
+        @media(min-width: $breakpoint-lg) {
+            padding-right: 40px;
+        }
+    }
+    &__text {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        order: 2;
+        float: left;
+        padding: 20px 30px 0;
+        font-size: 0.75em;
+        margin: 0 !important;
+        @media(min-width: $breakpoint-md) {
+            order: 1;
+            padding: 0;
+        }
+        @media(min-width: $breakpoint-lg) {
+            font-size: 1em;
+            padding: 0 100px 0 0;
+        }
+    }
+    & &__text {
+        padding: 40px 30px 0;
+        @media(min-width: $breakpoint-md) {
+            padding: 0;
+        }
+        @media(min-width: $breakpoint-lg) {
+            padding: 0 100px 0 0;
+        }
+    }
+    &__single--animate &__text {
+        opacity: 1;
+    }
+    &__image {
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        order: 1;
+        margin: 0 !important;
+        @media(min-width: $breakpoint-md) {
+            order: 2;
+            margin: 0 0 0 5% !important;
+            transform: translateX(100px);
+            display: block;
+        }
+        img {
+            box-shadow: 0px 22px 80px 0px rgba(0, 0, 0, 0.25);
+            @media(min-width: $breakpoint-md) {
+                max-width: 800px;
+            }
+        }
+    }
+    &__single--animate &__image {
+        opacity: 1;
+        transform: translateY(0);
+        @media(min-width: $breakpoint-md) {
+            transform: translateX(0);
+        }
+    }
+    &__controls {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out 0.5s;
+        position: absolute;
+        top: 0%;
+        left: 0px;
+        right: 0px;
+        text-align: center;
+        padding: 68% 0 0;
+        @media(min-width: $breakpoint-md) {
+            margin: 40px 0 0;
+            position: static;
+            text-align: left;
+            padding: 0;
+        }
+        &.built {
+            opacity: 1;
+        }
+    }
+    &__nav {
+        max-height: 0;
+        @media(min-width: $breakpoint-md) {
+            max-height: none;
+        }
+    }
+    &__nav-link {
+        width: 12px;
+        height: 12px;
+        overflow: hidden;
+        text-indent: -999px;
+        border: 2px #444 solid;
+        display: inline-block;
+        margin: 0 0 0 25px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 $brand-color;
+        transition: background-color 0.25s ease-in-out, border-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+        &:first-child {
+            margin: 0;
+        }
+        &.active {
+            border-color: $brand-color;
+            background: $brand-color;
+            box-shadow: 0 0 0 2px $brand-color;
+        }
+    }
+}

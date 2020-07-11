@@ -1,0 +1,80 @@
+.wrapper {
+    overflow: hidden;
+    padding-top: 60px;
+    @media(min-width: $breakpoint-md) {
+        padding-top: 120px;
+    }
+}
+
+html {
+    background: #262428;
+}
+
+body {
+    position: relative;
+    background: white;
+    z-index: 1;
+}
+
+.container {
+    @extend %container;
+    &--narrow {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+.section {
+    @extend %section;
+    position: relative;
+    &__header {
+        text-align: center;
+        margin: 0 auto $sp-unit*2;
+        max-width: 800px;
+        p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    }
+}
+
+.section-container>.section:first-child {
+    border-top: 0;
+    padding-top: 0px;
+}
+
+.section-subtitle {
+    // @extend %subtitle;
+    text-align: center;
+}
+
+.section-title {
+    // @extend %title;
+    text-align: center;
+    margin: 0 0 0.5em;
+    font-size: 1.5em;
+    @media(min-width: $breakpoint-sm) {
+        font-size: 1.6em;
+    }
+    @media(min-width: $breakpoint-md) {
+        font-size: 2em;
+    }
+    span {
+        color: $brand-color;
+    }
+}
+
+.section-footer {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+main {
+    // overflow: hidden;
+}
+
+article {
+    a {
+        font-weight: bold;
+    }
+}

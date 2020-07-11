@@ -1,0 +1,12 @@
+.widget_categories {
+    ul, li {
+        list-style: none;
+    }
+    ul {
+        margin: 0;
+
+        ul {
+            margin: 0 0 0 $sp-unit;
+        }
+    }
+}

@@ -141,7 +141,7 @@ gulp.task('js', () => {
     .pipe(
       webpack({
         mode: 'production',
-        entry: allJSAssets,
+        entry: filesObject,
         output: {
           filename: '[name].bundle.js',
         }

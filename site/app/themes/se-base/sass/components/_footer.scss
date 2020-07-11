@@ -1,0 +1,85 @@
+.references {
+    margin: $sp-unit*4 0 0;
+    @include font-size(14);
+    a {
+        word-break: break-word;
+    }
+}
+
+.footer {
+    background: $brand-color;
+    @extend %clearfix;
+    padding: 0 0 $sp-unit;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    @media(min-width: $breakpoint-lg) {
+        text-align: left;
+    }
+    &__section {
+        padding: $sp-unit 0;
+        @media(min-width: $breakpoint-lg) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px #39383B solid;
+        }
+    }
+    &__logo {
+        max-width: 300px;
+        margin: 0 auto 40px;
+        @media(min-width: $breakpoint-lg) {
+            width: 15%;
+            margin: 0;
+        }
+    }
+    &__menu {
+        font-size: 0.8em;
+        margin: 0 auto 40px;
+        @media(min-width: $breakpoint-lg) {
+            width: 80%;
+            margin: 0;
+        }
+        ul,
+        p {
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        li {
+            list-style-type: none;
+        }
+        a {
+            padding: 0 0.5em;
+            position: relative;
+        }
+        a+a:before {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 1em;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: -0.25em;
+            margin: -0.5em -1px;
+        }
+    }
+    a:hover {
+        color: #fff;
+    }
+    .nav-sec {
+        a {
+            text-transform: uppercase;
+            color: white;
+            &:hover {
+                color: $brand-color;
+            }
+        }
+    }
+}
