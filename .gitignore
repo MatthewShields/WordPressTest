@@ -4,5 +4,8 @@ bin
 node_modules
 dist
 
+aiowps_backups
+site/wp/wp-content/cache
+
 site/app/uploads/*
 !site/app/uploads/.gitkeep

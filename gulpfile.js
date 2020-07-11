@@ -17,6 +17,8 @@
  *
  */
 
+const theme_name = 'se-base';
+
 const gulp = require('gulp'),
   del = require('del'),
   sourcemaps = require('gulp-sourcemaps'),
@@ -39,9 +41,9 @@ const gulp = require('gulp'),
   sass = require('gulp-sass'),
   twig = require('gulp-twig'),
   fs = require('fs'),
-  src_folder = './wp/wp-content/themes/se-base/',
+  src_folder = './site/app/themes/'+theme_name+'/',
   src_assets_folder = src_folder + 'assets/',
-  dist_folder = './wp/wp-content/themes/se-base/',
+  dist_folder = './site/app/themes/'+theme_name+'/',
   dist_assets_folder = dist_folder + 'compiled/'
 
 sass.compiler = require('node-sass')
@@ -264,4 +266,6 @@ gulp.task('watch', () => {
     .on('change', browserSync.reload)
 })
 
-gulp.task('default', gulp.series('dev', gulp.parallel('watch')))
+gulp.task('default', gulp.series('dev', gulp.parallel('watch')));
+
+gulp.task('build', gulp.series('dev'));
