@@ -2,8 +2,10 @@
 /** Enable W3 Total Cache */
 define('WP_CACHE', true); // Added by W3 Total Cache
 
-if ( !defined('MATT_ROOT') )
+if ( !defined('MATT_ROOT') ) {
+  define('MATT_ROOT1', dirname(__FILE__));
   define('MATT_ROOT', dirname(__FILE__) . '/');
+}
 
 // Set your environment/url pairs
 $environments = array(

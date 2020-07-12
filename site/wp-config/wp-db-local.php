@@ -47,3 +47,17 @@ define('WP_CONTENT_URL', WP_HOME . '/' . CONTENT_DIR);
 define('APPLY_ENV_CSS', true);
 define('HIDE_ACF_MENU_ITEM', false);
 define('BUNDLE_COMPONENT_CSS', false);
+
+// define('W3TC_CACHE_DIR', MATT_ROOT . 'w3-total');
+// define('W3TC_ADDIN_FILE_ADVANCED_CACHE', MATT_ROOT . 'w3-total');
+
+if ( !defined( 'W3TC_CACHE_DIR' ) )
+    define( 'W3TC_CACHE_DIR', MATT_ROOT . 'w3-total' );
+// if ( !defined( 'W3TC_CONFIG_DIR' ) )
+//     define( 'W3TC_CONFIG_DIR', MATT_ROOT . 'w3-total/w3tc-config' );
+if ( !defined( 'W3TC_CACHE_MINIFY_DIR' ) )
+    define( 'W3TC_CACHE_MINIFY_DIR', MATT_ROOT . 'w3-total/minify' );
+if ( !defined( 'W3TC_CACHE_PAGE_ENHANCED_DIR' ) )
+    define( 'W3TC_CACHE_PAGE_ENHANCED_DIR', MATT_ROOT . 'w3-total/page_enhanced' );
+if ( !defined( 'W3TC_CACHE_TMP_DIR' ) )
+    define( 'W3TC_CACHE_TMP_DIR', MATT_ROOT . 'w3-total/tmp' );
