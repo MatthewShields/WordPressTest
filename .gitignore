@@ -9,7 +9,3 @@ site/w3-total/*
 !site/w3-total/.gitkeep
 
 site/app/uploads/*
-!site/app/uploads/.gitkeep
-
-site/uploads/*
-!site/uploads/.gitkeep
