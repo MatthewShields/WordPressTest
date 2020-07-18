@@ -1,1 +1,0 @@
-const t=class{constructor(t,s){this.target=t,this.wrapper=s,this._init_events()}_init_events(){this.target.wrap('<div class="'+this.wrapper+'"></div>')}};export default t;

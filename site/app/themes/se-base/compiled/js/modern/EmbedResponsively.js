@@ -1,1 +1,0 @@
-const t=class{constructor(t,a){this.targets=t,this.wrapper=a,this._init_events()}_init_events(){var t=this;t.targets.each((function(){var a=$(this);if(!a.parent().hasClass("embed-container")){var s=a.attr("width"),i=a.attr("height"),e=56.25;if(s&&i)e=i/s*100;a.wrap('<div style="padding-bottom:'+e+'%" class="'+t.wrapper+'"></div>')}}))}};export default t;
