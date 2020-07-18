@@ -58,7 +58,7 @@
         "\\bsql_calc_found_rows\\b",
         "\\bfound_rows\\(\\)"
     ],
-    "lazyload.enabled": true,
+    "lazyload.enabled": false,
     "lazyload.process_img": true,
     "lazyload.process_background": true,
     "lazyload.exclude": [
@@ -287,7 +287,7 @@
     "minify.symlinks": [],
     "minify.lifetime": 86400,
     "minify.upload": true,
-    "minify.html.enable": false,
+    "minify.html.enable": true,
     "minify.html.engine": "html",
     "minify.html.reject.feed": false,
     "minify.html.inline.css": false,
@@ -298,7 +298,7 @@
         "RSPEAK_"
     ],
     "minify.css.combine": false,
-    "minify.css.enable": true,
+    "minify.css.enable": false,
     "minify.css.engine": "css",
     "minify.css.http2push": false,
     "minify.css.strip.comments": false,
@@ -307,7 +307,7 @@
     "minify.css.imports": "",
     "minify.css.groups": [],
     "minify.js.http2push": false,
-    "minify.js.enable": true,
+    "minify.js.enable": false,
     "minify.js.engine": "js",
     "minify.js.combine.header": false,
     "minify.js.header.embed_type": "blocking",
@@ -352,10 +352,18 @@
     "minify.htmltidy.options.hide-comments": true,
     "minify.htmltidy.options.wrap": 0,
     "minify.reject.logged": false,
-    "minify.reject.ua": [],
-    "minify.reject.uri": [],
-    "minify.reject.files.js": [],
-    "minify.reject.files.css": [],
+    "minify.reject.ua": [
+        ""
+    ],
+    "minify.reject.uri": [
+        ""
+    ],
+    "minify.reject.files.js": [
+        ""
+    ],
+    "minify.reject.files.css": [
+        ""
+    ],
     "minify.cache.files": [
         ""
     ],
