@@ -9,3 +9,5 @@ site/w3-total/*
 !site/w3-total/.gitkeep
 
 site/app/uploads/*
+site/app/themes/se-base/compiled/*
+!site/app/themes/se-base/compiled/.gitkeep
